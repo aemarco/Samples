@@ -1,0 +1,12 @@
+global using CommunityToolkit.Mvvm.ComponentModel;
+global using CommunityToolkit.Mvvm.Input;
+global using CommunityToolkit.Mvvm.Messaging;
+global using Microsoft.Extensions.Logging;
+global using System;
+global using System.ComponentModel;
+global using System.Threading;
+global using System.Threading.Tasks;
+global using System.Windows;
+global using WpfCommunityToolkit.Model;
+global using WpfCommunityToolkit.View;
+global using WpfCommunityToolkit.ViewModel;

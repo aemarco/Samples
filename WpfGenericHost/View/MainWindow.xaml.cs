@@ -1,4 +1,4 @@
-﻿namespace WpfGenericHost;
+﻿namespace WpfGenericHost.View;
 
 public partial class MainWindow
 {

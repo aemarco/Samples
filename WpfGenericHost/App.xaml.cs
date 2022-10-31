@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.Windows;
+using WpfGenericHost.View;
 
 namespace WpfGenericHost;
 
@@ -18,8 +19,8 @@ public partial class App
             .Build();
         _host.Start();
 
-        var window = _host.Services.GetRequiredService<MainWindow>();
-        window.Show();
+        MainWindow = _host.Services.GetRequiredService<MainWindow>();
+        MainWindow.Show();
     }
 
     private void App_OnExit(object sender, ExitEventArgs e)

@@ -1,0 +1,44 @@
+﻿<Window x:Class="WpfCommunityToolkit.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:WpfCommunityToolkit.ViewModel"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        d:DataContext="{d:DesignInstance vm:MainWindowViewModel, IsDesignTimeCreatable=False}">
+    <Grid>
+        <StackPanel 
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+
+            <TextBox
+
+                MinWidth="200"
+                Text="{Binding FirstName, UpdateSourceTrigger=PropertyChanged}" />
+
+            <TextBox 
+                MinWidth="200"
+                Text="{Binding LastName, UpdateSourceTrigger=PropertyChanged}" />
+
+            <Label Content="{Binding FullName}" />
+
+            <Button 
+                Content="Click" 
+                Command="{Binding ClickCommand}" />
+
+
+            <Button 
+                Content="Click2"
+                Command="{Binding Click2Command}" />
+
+            <Button 
+                Content="Cancel Click2"
+                Command="{Binding Click2CancelCommand}"
+                Visibility="{Binding Click2Command.IsRunning, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+
+
+        </StackPanel>
+
+    </Grid>
+</Window>
